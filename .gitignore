@@ -1,0 +1,84 @@
+# ---------------------------------------------------------------
+# EduPredict — .gitignore
+# A machine learning project that predicts students' final exam
+# scores (regression on Exam_Score).
+# ---------------------------------------------------------------
+
+# --- Secrets and environment variables ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+.python-version
+
+# --- Tests, caches, linters ---
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.hypothesis/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+.jupyter/
+profile_default/
+ipython_config.py
+
+# --- Trained models and encoders ---
+# The exported pipeline, scaler, encoders and model files are
+# generated artifacts — they are not versioned.
+models/
+*.joblib
+*.pkl
+!models/.gitkeep
+
+# --- Reports and figures ---
+# Generated profiling reports and figures can be regenerated on demand.
+reports/*
+!reports/.gitkeep
+reports/figures/
+*.png
+*.jpg
+*.jpeg
+*.pdf
+
+# --- Streamlit ---
+.streamlit/secrets.toml
+
+# --- Docker ---
+.docker/
+docker-compose.override.yml
+.pgdata/
+.env.docker
+
+# --- IDE / editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
